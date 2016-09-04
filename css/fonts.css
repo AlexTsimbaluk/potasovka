@@ -1,0 +1,39 @@
+@font-face {
+	font-family: "RobotoRegular";
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+			 url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "San Francisco Regular";
+	src: url("../fonts/sanfranciscodisplay-regular.woff");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "San Francisco Bold";
+	src: url("../fonts/sanfranciscodisplay-bold.woff");
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "San Francisco Medium";
+	src: url("../fonts/sanfranciscodisplay-medium.woff");
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "San Francisco Thin";
+	src: url("../fonts/sanfranciscodisplay-thin.woff");
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: "San Francisco Light";
+	src: url("../fonts/sanfranciscodisplay-ultralight.woff");
+	font-weight: 100;
+}
