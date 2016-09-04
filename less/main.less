@@ -299,13 +299,16 @@ header {
             padding-bottom: 64px;
             div {
                 float: left;
-                width: 45%;
+                
 
-                &.empty {
-                    width: 10%;
+                &:first-child  {
+                    text-align: right;
+                    width: 45%;
                 }
                 &:last-child {
-                    margin: 0 0 0 70px;
+                    padding: 0 0 0 70px;
+                    text-align: left;
+                    width: 55%;
                 }
 
                 &.content {
@@ -316,7 +319,6 @@ header {
                         font-family: @sf-medium;
                         font-size: 30px;
                         line-height: 47px;
-                        margin-left: 5px;
                         padding: 0 8px;
                         text-transform: uppercase;
                     }
@@ -325,7 +327,7 @@ header {
                         font-family: @sf-medium;
                         font-size: 20px;
                         line-height: 24px;
-                        margin: 5px 0 0 5px;
+                        margin: 5px 0 0 0;
                     }
                     // &.text-left {
                     //     margin: 0 0 0 20px;

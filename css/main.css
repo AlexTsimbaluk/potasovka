@@ -1898,16 +1898,19 @@ header .banner .banner-content p
 .rules .small-visible .rule div
 {
     float: left;
-
-    width: 45%;
 }
-.rules .small-visible .rule div.empty
+.rules .small-visible .rule div:first-child
 {
-    width: 10%;
+    width: 45%;
+
+    text-align: right;
 }
 .rules .small-visible .rule div:last-child
 {
-    margin: 0 0 0 70px;
+    width: 55%;
+    padding: 0 0 0 70px;
+
+    text-align: left;
 }
 .rules .small-visible .rule div.content h2
 {
@@ -1917,7 +1920,6 @@ header .banner .banner-content p
 
     display: inline-block;
 
-    margin-left: 5px;
     padding: 0 8px;
 
     text-transform: uppercase;
@@ -1931,7 +1933,7 @@ header .banner .banner-content p
     font-size: 20px;
     line-height: 24px;
 
-    margin: 5px 0 0 5px;
+    margin: 5px 0 0 0;
 
     color: #222;
 }
