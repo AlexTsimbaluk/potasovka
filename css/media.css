@@ -107,9 +107,21 @@
 }
 @media only screen and (max-width: 670px)
 {
-    .rules .small-visible .rule h2
+    .rules .small-visible .rule div.content h2
     {
         font-size: 24px;
+    }
+    .rules .small-visible .rule div.content p
+    {
+        font-size: 18px;
+    }
+    .rules .small-visible .rule div:first-child
+    {
+        padding: 0 0 0 10px;
+    }
+    .rules .small-visible .rule div:last-child
+    {
+        padding: 0 10px 0 60px;
     }
 }
 @media only screen and (max-width: 600px)
@@ -147,6 +159,21 @@
         margin-right: 28px;
     }
 }
+@media only screen and (max-width: 530px)
+{
+    .rules .small-visible .rule div.content h2
+    {
+        font-size: 20px;
+    }
+    .rules .small-visible .rule div.content p
+    {
+        font-size: 16px;
+    }
+    .rules .small-visible .rule div:last-child
+    {
+        padding: 0 10px 0 50px;
+    }
+}
 @media only screen and (max-width: 500px)
 {
     .page-nav li
@@ -157,6 +184,14 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
 {
+    .rules .divider
+    {
+        left: 4%;
+    }
+    .rules .small-visible .rule div:last-child
+    {
+        padding: 0 10px;
+    }
     .registration
     {
         padding: 30px 0 44px;
