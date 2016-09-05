@@ -35,6 +35,18 @@ $(document).ready(function() {
 		$('html, body').animate({scrollTop: $(window.location.hash).offset().top}, 500);
 	}
 
+	//показ формы обратного звонка
+	$(".show-register").click(function (e) {
+		e.preventDefault();
+		$('.popup-form, .popup-overlay').fadeIn(500);
+	});
+
+	//закрытие модального окна и формы, сброс полей формы
+	$(".popup-overlay, .close-popup").click(function (e){
+		$(".popup-form, .popup-overlay").fadeOut(500);
+		$(':input', ".popup-form").not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
+	});
+
 });
 
 $(window).scroll(function() {

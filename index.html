@@ -63,6 +63,9 @@
 	<!-- <style></style> -->
 
 	<!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" /> -->
+
+	<link rel="stylesheet" href="libs/font-awesome-4.3.0/css/font-awesome.min.css">
+	
 	<link rel="stylesheet" href="libs/responsive-nav/responsive-nav.css">
 
     <link rel="stylesheet" href="css/fonts.css">
@@ -96,6 +99,20 @@
 	<!-- <div class="loader">
 		<div class="loader_inner"></div>
 	</div> -->
+
+	<div class="popup-overlay"></div>
+
+	<div class="popup-form">
+		<div class="close-popup"><i class="fa fa-close"></i></div>
+		<form action="" class="registration-form">
+			<h2 class="text-center">РЕГИСТРАЦИЯ</h2>
+				<input type="text" class="registration-team" placeholder="Название команды">
+				<input type="email" class="registration-email" placeholder="Email">
+				<input type="text" class="registration-phone" placeholder="Телефон">
+			
+				<button class="js-button registration-button">Отправить</button>
+		</form>
+	</div>
 
 	<nav class="side-nav">
 		<ul>
@@ -269,7 +286,7 @@
 						<p class="time">18:00</p>
 					</div>
 
-					<button class="register">Регистрация</button>
+					<button class="js-button show-register">Регистрация</button>
 
 				</div>
 			</div>
@@ -294,7 +311,7 @@
 							
 							<div class="message">
 								<textarea class="callback-message" placeholder="Собщение"></textarea>
-								<button class="send-message">Отправить сообщение</button>
+								<button class="js-button send-message">Отправить сообщение</button>
 							</div>
 						</form>
 					</div>

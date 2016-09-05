@@ -388,6 +388,11 @@
     {
         margin-bottom: 10px;
     }
+    .popup-form
+    {
+        width: 320px;
+        padding: 20px 10px 30px;
+    }
 }
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */

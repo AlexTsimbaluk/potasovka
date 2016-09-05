@@ -1685,6 +1685,107 @@ ol
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
 }
+/* Popup form */
+.popup-overlay
+{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: default;
+
+    background-color: rgba(0, 0, 0, .6);
+}
+.popup-form
+{
+    position: fixed;
+    z-index: 3;
+    top: 45%;
+    left: 50%;
+
+    display: none;
+
+    width: 360px;
+    padding: 20px 30px 30px;
+
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    background: #131313;
+
+     -khtml-border-radius: 8px;
+}
+.popup-form .close-popup
+{
+    font-size: 20px;
+
+    position: absolute;
+    top: 5px;
+    right: 10px;
+
+    cursor: pointer;
+    -webkit-transition: all .3s;
+            transition: all .3s;
+
+    color: #10cfbd;
+}
+.popup-form .close-popup:hover
+{
+    color: #0dae9f;
+}
+.registration-form h2
+{
+    margin-bottom: 10px;
+
+    color: #fff;
+}
+.registration-form input
+{
+    font-family: 'San Francisco Light', sans-serif;
+    font-size: 25px;
+
+    display: block;
+
+    width: 100%;
+    height: 52px;
+    margin-bottom: 16px;
+    padding: 17px;
+
+    color: #adadad;
+    border: none;
+    -webkit-border-radius: 8px 7px 7px 8px;
+            border-radius: 8px 7px 7px 8px;
+    background-color: #fff;
+}
+.registration-form .registration-button
+{
+    font-family: 'San Francisco Light', sans-serif;
+    font-size: 25px;
+
+    width: 100%;
+    height: 52px;
+
+    color: #000;
+    border: none;
+    background-color: #10cfbd;
+}
+.registration-form .registration-button:hover
+{
+    background-color: #0dae9f;
+}
 /* Page navigation */
 .page-nav
 {
@@ -1972,7 +2073,7 @@ header .banner .banner-content p
     font-size: 84px;
     font-weight: 100;
 }
-.registration .register
+.registration .show-register
 {
     font-family: 'San Francisco Light', sans-serif;
     font-size: 28px;
@@ -1984,6 +2085,10 @@ header .banner .banner-content p
     color: #222;
     border: none;
     background-color: #10cfbd;
+}
+.registration .show-register:hover
+{
+    background-color: #0dae9f;
 }
 .contacts
 {
@@ -2134,4 +2239,8 @@ header .banner .banner-content p
     color: #fff;
     border: none;
     background-color: #10cfbd;
+}
+.contacts .form-wrapper .send-message:hover
+{
+    background-color: #0dae9f;
 }
