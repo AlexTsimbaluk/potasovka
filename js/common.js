@@ -2,6 +2,19 @@ var dateStart = new Date().getTime();
 
 $(document).ready(function() {
 
+	var screenWidth = screen.width;
+	var windowWidth = $(window).width();
+	var scrollWidth = screenWidth - windowWidth;
+	if (screenWidth > 1200 && scrollWidth < 35) {
+		// $('.header-main').css({'height' : screen.height});
+	}
+
+	if (screenWidth > 600) {
+		$('.rule-icon, .rule-content', '.rules .left').addClass("wow fadeInLeft").attr("data-wow-offset", "200");
+		$('.rule-icon, .rule-content', '.rules .right').addClass("wow fadeInRight").attr("data-wow-offset", "200");
+		$('.contacts .side-contacts .contact-wrapper').addClass("wow bounceIn").attr("data-wow-offset", "200");
+	}
+
 	var nav = responsiveNav(".nav-collapse", {
 		label: ''
 	});
@@ -21,11 +34,8 @@ $(document).ready(function() {
 	// navigation
 	// $('li a', '.page-nav, .side-nav').click(function() {
 	$('.page-nav li a, .side-nav li a').click(function() {
-		// $('li', '.page-nav, .side-nav').removeClass('active');
 		$('.page-nav li, .side-nav li').removeClass('active');
 		$(this).parent().addClass('active');
-		// var miniOffset = ($(this).attr('href') == '#restr' ? 35 : 0);
-		// $('html, body').animate({scrollTop: $($(this).attr('href')).offset().top - miniOffset}, 500);
 		$('html, body').animate({scrollTop: $($(this).attr('href')).offset().top}, 500);
 		return false;
 	});
@@ -65,9 +75,10 @@ $(window).scroll(function() {
 
 $(window).load(function() {
 
+	new WOW().init();
+
 	var dateLoad = new Date().getTime();
-	// console.log(dateLoad, dateStart);
-	console.log((dateLoad - dateStart) + ' ms');
+	// console.log((dateLoad - dateStart) + ' ms');
 
 	// Preloader
 	/*$(".loader_inner").fadeOut();
