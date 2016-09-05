@@ -6,6 +6,19 @@
 @desktop: 1024px;
 @desktop-area: 970px;
 
+/* Display Flex */
+/* контейнер для выравниваемых элементов */
+.flex-container {
+    justify-content: space-around;  /* выравнивание по главной оси, блоки равномерно распределены вдоль главной оси */
+    align-items: center;        /* выравнивание по поперечной оси, блоки располагаются в центре поперечной оси */
+    flex-direction: row;       /* Направление главной оси flex-контейнера, row по умолчанию, слева направо (в rtl справа налево) */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
 
 /*==========  Desktop First Method  ==========*/
 
@@ -26,6 +39,21 @@
 		}
 		.right {
 			padding-left: 70px;
+		}
+	}
+
+	.contacts {
+		.form-wrapper {
+			display: block;
+			margin: 0 auto;
+			padding: 240px 0 0;
+
+			.data {
+				width: 40%;
+			}
+			.message {
+				width: 54%;
+			}
 		}
 	}
 }
@@ -51,6 +79,16 @@
 			}
 		}
 	}
+
+	.contacts {
+		.contact-content {
+			font-size: 22px;
+		}
+	}
+}
+
+@media only screen and (max-width : 900px) {
+	
 }
 
 @media only screen and (max-width : 800px) {
@@ -94,6 +132,24 @@
 		}
 	}
 
+	.contacts {
+		.form-wrapper {
+			padding: 40px 0;
+
+			.data {
+				input {
+					font-size: 22px;
+				}
+			}
+			.message {
+				textarea,
+				.send-message {
+					font-size: 22px;
+				}
+			}
+		}
+	}
+
     /*Disable Animation on Mobile Devices*/
     .animated
     {
@@ -109,6 +165,39 @@
             -ms-animation: none !important;
                 animation: none !important;
     }
+}
+
+@media only screen and (max-width : 767px) {
+	.contacts {
+		.side-contacts {
+			.flex-container;
+			padding: 40px 0 0;
+
+			.contact-wrapper {
+				display: inline-block;
+			}
+		}
+		
+		.form-wrapper {
+			display: block;
+			margin: 0 auto;
+			padding: 40px 0;
+			width: 95%; 
+
+			.data {
+				width: 40%;
+				input {
+					font-size: 22px;
+				}
+			}
+			.message {
+				width: 52%;
+				textarea {
+					font-size: 22px;
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (max-width : 670px) {
@@ -188,6 +277,39 @@
 			}
 		}
 	}
+
+	.contacts {
+		.side-contacts {
+			.contact-wrapper {
+				.contact-content {
+					font-size: 20px;
+				}
+			}
+		}
+		.form-wrapper {
+			padding: 20px 0;
+			width: 80%;
+
+			h2 {
+				font-size: 32px;
+			}
+
+			.data {
+				float: none;
+				width: 100%;
+				input {
+					font-size: 22px;
+				}
+			}
+			.message {
+				margin: 0;
+				width: 100%;
+				textarea {
+					font-size: 22px;
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (max-width : 500px)
@@ -226,11 +348,53 @@
 			}
 		}
 	}
+
+	.contacts {
+		.side-contacts {
+			display: block;
+			.contact-wrapper {
+				display: block;
+			}
+		}
+		.form-wrapper {
+			padding: 20px 0;
+			width: 80%;
+
+			h2 {
+				font-size: 32px;
+			}
+
+			.data {
+				float: none;
+				width: 100%;
+				input {
+					font-size: 22px;
+				}
+			}
+			.message {
+				margin: 0;
+				width: 100%;
+				textarea {
+					font-size: 22px;
+				}
+			}
+		}
+	}
 }
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
+@media only screen and (max-width : 420px)
 {
+	header {
+		.banner {
+			.banner-content {
+				a img {
+					margin-bottom: 10px;
+				}
+				
+			}
+		}
+	}
 }
 
 

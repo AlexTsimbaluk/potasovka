@@ -1,3 +1,27 @@
+/* Display Flex */
+/* контейнер для выравниваемых элементов */
+.flex-container
+{
+    /* Направление главной оси flex-контейнера, row по умолчанию, слева направо (в rtl справа налево) */
+    display: -moz-flex;
+    display:  -ms-flex;
+    display:   -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display:      flex;
+        flex-direction: row;
+
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    /* выравнивание по главной оси, блоки равномерно распределены вдоль главной оси */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* выравнивание по поперечной оси, блоки располагаются в центре поперечной оси */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+}
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1170px)
@@ -13,6 +37,21 @@
     .rules .right
     {
         padding-left: 70px;
+    }
+    .contacts .form-wrapper
+    {
+        display: block;
+
+        margin: 0 auto;
+        padding: 240px 0 0;
+    }
+    .contacts .form-wrapper .data
+    {
+        width: 40%;
+    }
+    .contacts .form-wrapper .message
+    {
+        width: 54%;
     }
 }
 /* Medium Devices, Desktops */
@@ -39,6 +78,10 @@
         font-size: 42px;
 
         padding: 0 0 30px 60px;
+    }
+    .contacts .contact-content
+    {
+        font-size: 22px;
     }
 }
 @media only screen and (max-width: 800px)
@@ -89,6 +132,19 @@
     {
         display: block;
     }
+    .contacts .form-wrapper
+    {
+        padding: 40px 0;
+    }
+    .contacts .form-wrapper .data input
+    {
+        font-size: 22px;
+    }
+    .contacts .form-wrapper .message textarea,
+    .contacts .form-wrapper .message .send-message
+    {
+        font-size: 22px;
+    }
     /*Disable Animation on Mobile Devices*/
     .animated
     {
@@ -103,6 +159,61 @@
         -webkit-animation: none !important;
             -ms-animation: none !important;
                 animation: none !important;
+    }
+}
+@media only screen and (max-width: 767px)
+{
+    .contacts .side-contacts
+    {
+        /* Направление главной оси flex-контейнера, row по умолчанию, слева направо (в rtl справа налево) */
+        display: -moz-flex;
+        display:  -ms-flex;
+        display:   -o-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display:      flex;
+            flex-direction: row;
+
+        padding: 40px 0 0;
+
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        /* выравнивание по главной оси, блоки равномерно распределены вдоль главной оси */
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        /* выравнивание по поперечной оси, блоки располагаются в центре поперечной оси */
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+    }
+    .contacts .side-contacts .contact-wrapper
+    {
+        display: inline-block;
+    }
+    .contacts .form-wrapper
+    {
+        display: block;
+
+        width: 95%;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+    .contacts .form-wrapper .data
+    {
+        width: 40%;
+    }
+    .contacts .form-wrapper .data input
+    {
+        font-size: 22px;
+    }
+    .contacts .form-wrapper .message
+    {
+        width: 52%;
+    }
+    .contacts .form-wrapper .message textarea
+    {
+        font-size: 22px;
     }
 }
 @media only screen and (max-width: 670px)
@@ -173,6 +284,38 @@
     {
         padding: 0 10px 0 50px;
     }
+    .contacts .side-contacts .contact-wrapper .contact-content
+    {
+        font-size: 20px;
+    }
+    .contacts .form-wrapper
+    {
+        width: 80%;
+        padding: 20px 0;
+    }
+    .contacts .form-wrapper h2
+    {
+        font-size: 32px;
+    }
+    .contacts .form-wrapper .data
+    {
+        float: none;
+
+        width: 100%;
+    }
+    .contacts .form-wrapper .data input
+    {
+        font-size: 22px;
+    }
+    .contacts .form-wrapper .message
+    {
+        width: 100%;
+        margin: 0;
+    }
+    .contacts .form-wrapper .message textarea
+    {
+        font-size: 22px;
+    }
 }
 @media only screen and (max-width: 500px)
 {
@@ -201,8 +344,51 @@
         font-size: 40px;
         line-height: 50px;
     }
+    .contacts .side-contacts
+    {
+        display: block;
+    }
+    .contacts .side-contacts .contact-wrapper
+    {
+        display: block;
+    }
+    .contacts .form-wrapper
+    {
+        width: 80%;
+        padding: 20px 0;
+    }
+    .contacts .form-wrapper h2
+    {
+        font-size: 32px;
+    }
+    .contacts .form-wrapper .data
+    {
+        float: none;
+
+        width: 100%;
+    }
+    .contacts .form-wrapper .data input
+    {
+        font-size: 22px;
+    }
+    .contacts .form-wrapper .message
+    {
+        width: 100%;
+        margin: 0;
+    }
+    .contacts .form-wrapper .message textarea
+    {
+        font-size: 22px;
+    }
 }
 /* Custom, iPhone Retina */
+@media only screen and (max-width: 420px)
+{
+    header .banner .banner-content a img
+    {
+        margin-bottom: 10px;
+    }
+}
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
 /* Extra Small Devices, Phones */
