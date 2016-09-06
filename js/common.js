@@ -57,6 +57,15 @@ $(document).ready(function() {
 		$(':input', ".popup-form").not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
 	});
 
+	/* Calendar */
+	$('#calendar').datepicker({
+		inline: true,
+		firstDay: 1,
+		showOtherMonths: true,
+		monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+		dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
+	});
+
 });
 
 $(window).scroll(function() {
