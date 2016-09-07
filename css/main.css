@@ -1892,6 +1892,12 @@ ol
 /* Calendar */
 .calendar
 {
+    /* float: right;
+    margin: 262px 0 0; */
+    position: absolute;
+    right: 0;
+    bottom: -12px;
+
     display: inline-block;
 }
 .ui-datepicker,
@@ -2004,7 +2010,7 @@ ol
 }
 .ui-datepicker-calendar .ui-state-default
 {
-    line-height: 35px;
+    line-height: 36px;
 
     display: block;
 

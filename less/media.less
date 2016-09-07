@@ -132,6 +132,13 @@
 		}
 	}
 
+	.calendar {
+		right: 30px;
+		.ui-datepicker-calendar td {
+			padding: 0 6px;
+		}
+	}
+
 	.contacts {
 		.form-wrapper {
 			padding: 40px 0;
@@ -222,6 +229,20 @@
 				}
 			}
 		}
+	}
+}
+
+@media only screen and (max-width : 630px) {
+	.registration {
+		text-align: center;
+		.show-register {
+			display: block;
+			margin: 60px auto 20px;
+		}
+	}
+
+	.calendar {
+		position: static;
 	}
 }
 
@@ -403,7 +424,26 @@
 }
 
 @media only screen and (max-width : 380px) {
+	.calendar {
+		.ui-datepicker-calendar td {
+			padding: 0 4px;
+		}
+		.ui-datepicker-prev,
+		.ui-datepicker-next {
+			top: 18px;
+		}
+		.ui-datepicker-month {
+			font-size: 42px;
+		}
+	}
+}
 
+@media only screen and (max-width : 340px) {
+	.calendar {
+		.ui-datepicker-calendar td {
+			padding: 0 3px;
+		}
+	}
 }
 
 

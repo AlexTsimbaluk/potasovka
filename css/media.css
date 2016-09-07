@@ -132,6 +132,14 @@
     {
         display: block;
     }
+    .calendar
+    {
+        right: 30px;
+    }
+    .calendar .ui-datepicker-calendar td
+    {
+        padding: 0 6px;
+    }
     .contacts .form-wrapper
     {
         padding: 40px 0;
@@ -233,6 +241,23 @@
     .rules .small-visible .rule div:last-child
     {
         padding: 0 10px 0 60px;
+    }
+}
+@media only screen and (max-width: 630px)
+{
+    .registration
+    {
+        text-align: center;
+    }
+    .registration .show-register
+    {
+        display: block;
+
+        margin: 60px auto 20px;
+    }
+    .calendar
+    {
+        position: static;
     }
 }
 @media only screen and (max-width: 600px)
@@ -392,6 +417,29 @@
     {
         width: 320px;
         padding: 20px 10px 30px;
+    }
+}
+@media only screen and (max-width: 380px)
+{
+    .calendar .ui-datepicker-calendar td
+    {
+        padding: 0 4px;
+    }
+    .calendar .ui-datepicker-prev,
+    .calendar .ui-datepicker-next
+    {
+        top: 18px;
+    }
+    .calendar .ui-datepicker-month
+    {
+        font-size: 42px;
+    }
+}
+@media only screen and (max-width: 340px)
+{
+    .calendar .ui-datepicker-calendar td
+    {
+        padding: 0 3px;
     }
 }
 /*==========  Mobile First Method  ==========*/

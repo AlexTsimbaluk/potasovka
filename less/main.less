@@ -54,7 +54,6 @@ html.js .loader_inner
 body
 {
     font-family: @sf-regular;
-    // padding-top: 50px;
 }
 
 // body.onload
@@ -284,7 +283,12 @@ ul, ol {
 /* Calendar */
 .calendar {
     display: inline-block;
+    /* float: right;
+    margin: 262px 0 0; */
     // .flex-container;
+    position: absolute;
+    bottom: -12px;
+    right: 0;
 }
 .ui-datepicker,
 .ui-datepicker table,
@@ -381,7 +385,7 @@ ul, ol {
     border-radius: 100%;
     color: #626262;
     display: block;
-    line-height: 35px;
+    line-height: 36px;
     outline: none;
     height: 34px;
     width: 34px;
