@@ -9,31 +9,14 @@
 }
 
 @font-face {
-	font-family: "San Francisco Regular";
-	src: url("../fonts/sanfranciscodisplay-regular.woff");
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: "San Francisco Bold";
-	src: url("../fonts/sanfranciscodisplay-bold.woff");
-	font-weight: 700;
-}
-
-@font-face {
-	font-family: "San Francisco Medium";
-	src: url("../fonts/sanfranciscodisplay-medium.woff");
-	font-weight: 500;
-}
-
-@font-face {
-	font-family: "San Francisco Thin";
-	src: url("../fonts/sanfranciscodisplay-thin.woff");
-	font-weight: 100;
-}
-
-@font-face {
-	font-family: "San Francisco Light";
-	src: url("../fonts/sanfranciscodisplay-ultralight.woff");
-	font-weight: 100;
+    font-family: 'SFUIDisplay-Light';
+    src: url('../fonts/SFUIDisplay-Light.otf');
+    src: url('../fonts/SFUIDisplay-Light.otf') format('embedded-opentype'),
+	     url('../fonts/SFUIDisplay-Light.otf') format('woff'),
+	     url('../fonts/SFUIDisplay-Light.otf') format('truetype'),
+	     url('../fonts/SFUIDisplay-Light.otf') format('svg');
+    src: local('SFUIDisplay-Light'),
+    	 url('../fonts/SFUIDisplay-Light.otf');
+    font-weight: normal;
+    font-style: normal;
 }

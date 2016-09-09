@@ -58,6 +58,18 @@
 	}
 }
 
+@media only screen and (max-width : 1080px) {
+	.rules {
+		.rules-list {
+			.rule {
+				div:last-child {
+					padding: 0 40px 0 10%;
+				}
+			}
+		}
+	}
+}
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 {
@@ -87,8 +99,17 @@
 	}
 }
 
-@media only screen and (max-width : 900px) {
-	
+@media only screen and (max-width : 920px) {
+	.rules {
+		.rules-list {
+			.rule {
+				padding: 0 0 58px 0;
+				div:first-child {
+					padding: 0 0 0 30px;
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (max-width : 800px) {
@@ -129,6 +150,27 @@
 		}
 		.small-visible {
 			display: block;
+		}
+
+		.rules-list {
+			.rule {
+				div {
+					&.content {
+						h2 {
+							font-size: 30px;
+						}
+						p {
+							font-size: 25px;
+						}
+					}
+					&:first-child {
+						// padding: 0 0 0 10px;
+					}
+					&:last-child {
+						// padding: 0 0 0 70px;
+					}
+				}
+			}
 		}
 	}
 
@@ -209,7 +251,8 @@
 
 @media only screen and (max-width : 670px) {
 	.rules {
-		.small-visible {
+		// .small-visible {
+		.rules-list {
 			.rule {
 				div {
 					&.content {
@@ -221,10 +264,10 @@
 						}
 					}
 					&:first-child {
-						padding: 0 0 0 10px;
+						// padding: 0 0 0 10px;
 					}
 					&:last-child {
-						padding: 0 10px 0 60px;
+						// padding: 0 20px 0 60px;
 					}
 				}
 			}
@@ -280,19 +323,38 @@
 @media only screen and (max-width : 530px)
 {
 	.rules {
-		.small-visible {
+		padding-top: 50px;
+
+		.divider {
+			display: none;
+			// left: 5%;
+		}
+		
+		.rules-list {
 			.rule {
 				div {
+					display: block;
+					float: none;
+					margin: 0 auto;
+					// padding: 0 !important;
 					&.content {
 						h2 {
-							font-size: 20px;
+							font-size: 32px;
+							margin-bottom: 10px;
 						}
 						p {
-							font-size: 16px;
+							font-size: 20px;
 						}
 					}
+					&:first-child {
+						padding: 0 0 25px 0;
+						text-align: center;
+						width: 80%;
+					}
 					&:last-child {
-						padding: 0 10px 0 50px;
+						padding: 0;
+						text-align: center;
+						width: 80%;
 					}
 				}
 			}
@@ -346,14 +408,10 @@
 @media only screen and (max-width : 480px)
 {
 	.rules {
-		.divider {
-			left: 4%;
-		}
-
-		.small-visible {
+		.rules-list {
 			.rule {
 				div {
-					&:last-child {
+					&.content {
 						padding: 0 10px;
 					}
 				}
@@ -434,6 +492,21 @@
 		}
 		.ui-datepicker-month {
 			font-size: 42px;
+		}
+	}
+
+	.rules {
+		.rules-list {
+			.rule {
+				div {
+					&.content {
+						h2 {font-size: 28px;}
+						p {font-size: 18px;}
+					}
+					&:first-child {width: 88%;}
+					&:last-child {width: 88%;}
+				}
+			}
 		}
 	}
 }

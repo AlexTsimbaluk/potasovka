@@ -1620,7 +1620,7 @@ html.js .loader_inner
 }
 body
 {
-    font-family: 'San Francisco Regular', sans-serif;
+    font-family: 'SFUIDisplay-Light', sans-serif;
 }
 /* выделение текста */
 ::-moz-selection
@@ -1754,7 +1754,7 @@ ol
 }
 .registration-form input
 {
-    font-family: 'San Francisco Light', sans-serif;
+    font-family: 'SFUIDisplay-Light', sans-serif;
     font-size: 25px;
 
     display: block;
@@ -1772,7 +1772,7 @@ ol
 }
 .registration-form .registration-button
 {
-    font-family: 'San Francisco Light', sans-serif;
+    font-family: 'SFUIDisplay-Light', sans-serif;
     font-size: 25px;
 
     width: 100%;
@@ -1785,109 +1785,6 @@ ol
 .registration-form .registration-button:hover
 {
     background-color: #0dae9f;
-}
-/* Page navigation */
-.page-nav
-{
-    float: right;
-
-    margin-top: 24px;
-    /* position: fixed;
-    right: 15px;
-    top: 0;
-    z-index: 10; */
-}
-.page-nav.sticked
-{
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    right: 15px;
-}
-.page-nav li
-{
-    display: inline-block;
-
-    margin-right: 54px;
-}
-.page-nav li a
-{
-    font-size: 20px;
-
-    padding-bottom: 1px;
-}
-.page-nav li:last-child
-{
-    margin-right: 0;
-}
-.page-nav li:hover a
-{
-    color: #10cfbd;
-    border-bottom: 3px solid #10cfbd;
-}
-.page-nav li.active a
-{
-    color: #10cfbd;
-    border-bottom: 3px solid #10cfbd;
-}
-.nav-toggle::before
-{
-    font-family: san-serif;
-    font-size: 40px;
-
-    position: relative;
-    top: 0;
-    left: 0;
-
-    width: 60px;
-    height: 55px;
-
-    content: '≡';
-    text-align: center;
-    text-decoration: none;
-    text-indent: 0;
-    text-indent: -300px;
-    text-transform: none;
-
-    color: #10cfbd;
-}
-.nav-toggle.active::before
-{
-    font-family: 'San Francisco Regular', sans-serif;
-
-    content: 'x';
-}
-.side-nav
-{
-    position: fixed;
-    z-index: 10;
-    top: 266px;
-    right: 26px;
-}
-.side-nav li
-{
-    margin-bottom: 10px;
-}
-.side-nav li a
-{
-    display: block;
-
-    width: 12px;
-    height: 12px;
-
-    -webkit-border-radius: 100%;
-            border-radius: 100%;
-    background: #10cfbd;
-}
-.side-nav li.active a
-{
-    border: 1px solid #10cfbd;
-    background-color: transparent;
-}
-.side-nav li:hover a
-{
-    border: 1px solid #10cfbd;
-    background-color: transparent;
 }
 /* Calendar */
 .calendar
@@ -2035,12 +1932,122 @@ ol
 {
     color: #565656;
 }
+/* Page navigation */
+.page-nav
+{
+    float: right;
+
+    margin-top: 24px;
+    /* position: fixed;
+    right: 15px;
+    top: 0;
+    z-index: 10; */
+}
+.page-nav.sticked
+{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 15px;
+}
+.page-nav li
+{
+    display: inline-block;
+
+    margin-right: 54px;
+}
+.page-nav li a
+{
+    font-size: 20px;
+
+    padding-bottom: 1px;
+}
+.page-nav li:last-child
+{
+    margin-right: 0;
+}
+.page-nav li:hover a
+{
+    color: #10cfbd;
+    border-bottom: 3px solid #10cfbd;
+}
+.page-nav li.active a
+{
+    color: #10cfbd;
+    border-bottom: 3px solid #10cfbd;
+}
+.nav-toggle::before
+{
+    font-family: san-serif;
+    font-size: 40px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: 60px;
+    height: 55px;
+
+    content: '≡';
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0;
+    text-indent: -300px;
+    text-transform: none;
+
+    color: #10cfbd;
+}
+.nav-toggle.active::before
+{
+    font-family: 'SFUIDisplay-Light', sans-serif;
+
+    content: 'x';
+}
+.side-nav
+{
+    position: fixed;
+    z-index: 10;
+    top: 266px;
+    right: 26px;
+}
+.side-nav li
+{
+    margin-bottom: 10px;
+}
+.side-nav li a
+{
+    display: block;
+
+    width: 12px;
+    height: 12px;
+
+    -webkit-border-radius: 100%;
+            border-radius: 100%;
+    background: #10cfbd;
+}
+.side-nav li.active a
+{
+    border: 1px solid #10cfbd;
+    background-color: transparent;
+}
+.side-nav li:hover a
+{
+    border: 1px solid #10cfbd;
+    background-color: transparent;
+}
 /* Header */
 header
 {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+
     background-color: #f5f5f5;
     background-image: -webkit-gradient(linear, left bottom, left top, from(#f3f3f3), color-stop(#ebebeb), to(#f5f5f5));
     background-image: linear-gradient(to top, #f3f3f3, #ebebeb, #f5f5f5);
+    -webkit-background-size: cover;
+            background-size: cover;
 }
 header .banner
 {
@@ -2052,7 +2059,7 @@ header .banner .banner-image
 }
 header .banner .banner-content
 {
-    font-family: 'San Francisco Medium', sans-serif;
+    font-family: 'SFUIDisplay-Light', sans-serif;
 
     margin: 116px 0 0 24px;
 }
@@ -2088,7 +2095,7 @@ header .banner .banner-content p
 .rules .divider
 {
     position: absolute;
-    top: 0;
+    top: 37px;
     left: 50%;
 
     -webkit-transform: translateX(-50%);
@@ -2109,7 +2116,7 @@ header .banner .banner-content p
 }
 .rules .rule-content h2
 {
-    font-family: 'San Francisco Medium', sans-serif;
+    font-family: 'SFUIDisplay-Light', sans-serif;
     font-size: 34px;
     line-height: 47px;
 
@@ -2124,7 +2131,7 @@ header .banner .banner-content p
 }
 .rules .rule-content p
 {
-    font-family: 'San Francisco Medium', sans-serif;
+    font-family: 'SFUIDisplay-Light', sans-serif;
     font-size: 25px;
     line-height: 28px;
 
@@ -2132,37 +2139,31 @@ header .banner .banner-content p
 
     color: #222;
 }
-.rules .small-visible
-{
-    display: none;
-
-    margin: -30px 0 0;
-}
-.rules .small-visible .rule
+.rules .rules-list .rule
 {
     padding-bottom: 64px;
 }
-.rules .small-visible .rule div
+.rules .rules-list .rule div
 {
     float: left;
 }
-.rules .small-visible .rule div:first-child
+.rules .rules-list .rule div:first-child
 {
     width: 45%;
 
     text-align: right;
 }
-.rules .small-visible .rule div:last-child
+.rules .rules-list .rule div:last-child
 {
     width: 55%;
-    padding: 0 0 0 70px;
+    padding: 0 0 0 10%;
 
     text-align: left;
 }
-.rules .small-visible .rule div.content h2
+.rules .rules-list .rule div.content h2
 {
-    font-family: 'San Francisco Medium', sans-serif;
-    font-size: 30px;
+    font-family: 'SFUIDisplay-Light', sans-serif;
+    font-size: 34px;
     line-height: 47px;
 
     display: inline-block;
@@ -2174,11 +2175,11 @@ header .banner .banner-content p
     color: #fff;
     background: #10cfbd;
 }
-.rules .small-visible .rule div.content p
+.rules .rules-list .rule div.content p
 {
-    font-family: 'San Francisco Medium', sans-serif;
-    font-size: 20px;
-    line-height: 24px;
+    font-family: 'SFUIDisplay-Light', sans-serif;
+    font-size: 25px;
+    line-height: 28px;
 
     margin: 5px 0 0 0;
 
@@ -2196,7 +2197,7 @@ header .banner .banner-content p
 }
 .registration .reg-descr
 {
-    font-family: 'San Francisco Thin', sans-serif;
+    font-family: 'SFUIDisplay-Light', sans-serif;
 
     color: #fff;
 }
@@ -2221,7 +2222,7 @@ header .banner .banner-content p
 }
 .registration .show-register
 {
-    font-family: 'San Francisco Light', sans-serif;
+    font-family: 'SFUIDisplay-Light', sans-serif;
     font-size: 28px;
 
     width: 261px;
@@ -2282,7 +2283,7 @@ header .banner .banner-content p
 }
 .contacts .contact-content
 {
-    font-family: 'San Francisco Light', sans-serif;
+    font-family: 'SFUIDisplay-Light', sans-serif;
     font-size: 25px;
 
     margin: 24px 0 57px;
@@ -2338,7 +2339,7 @@ header .banner .banner-content p
 }
 .contacts .form-wrapper input
 {
-    font-family: 'San Francisco Light', sans-serif;
+    font-family: 'SFUIDisplay-Light', sans-serif;
     font-size: 25px;
 
     display: block;
@@ -2356,7 +2357,7 @@ header .banner .banner-content p
 }
 .contacts .form-wrapper .callback-message
 {
-    font-family: 'San Francisco Light', sans-serif;
+    font-family: 'SFUIDisplay-Light', sans-serif;
     font-size: 25px;
 
     display: block;
@@ -2376,7 +2377,7 @@ header .banner .banner-content p
 }
 .contacts .form-wrapper .send-message
 {
-    font-family: 'San Francisco Light', sans-serif;
+    font-family: 'SFUIDisplay-Light', sans-serif;
     font-size: 25px;
 
     width: 100%;

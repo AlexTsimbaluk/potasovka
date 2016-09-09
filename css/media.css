@@ -54,6 +54,13 @@
         width: 54%;
     }
 }
+@media only screen and (max-width: 1080px)
+{
+    .rules .rules-list .rule div:last-child
+    {
+        padding: 0 40px 0 10%;
+    }
+}
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
 {
@@ -82,6 +89,17 @@
     .contacts .contact-content
     {
         font-size: 22px;
+    }
+}
+@media only screen and (max-width: 920px)
+{
+    .rules .rules-list .rule
+    {
+        padding: 0 0 58px 0;
+    }
+    .rules .rules-list .rule div:first-child
+    {
+        padding: 0 0 0 30px;
     }
 }
 @media only screen and (max-width: 800px)
@@ -131,6 +149,14 @@
     .rules .small-visible
     {
         display: block;
+    }
+    .rules .rules-list .rule div.content h2
+    {
+        font-size: 30px;
+    }
+    .rules .rules-list .rule div.content p
+    {
+        font-size: 25px;
     }
     .calendar
     {
@@ -226,21 +252,13 @@
 }
 @media only screen and (max-width: 670px)
 {
-    .rules .small-visible .rule div.content h2
+    .rules .rules-list .rule div.content h2
     {
         font-size: 24px;
     }
-    .rules .small-visible .rule div.content p
+    .rules .rules-list .rule div.content p
     {
         font-size: 18px;
-    }
-    .rules .small-visible .rule div:first-child
-    {
-        padding: 0 0 0 10px;
-    }
-    .rules .small-visible .rule div:last-child
-    {
-        padding: 0 10px 0 60px;
     }
 }
 @media only screen and (max-width: 630px)
@@ -297,17 +315,44 @@
 }
 @media only screen and (max-width: 530px)
 {
-    .rules .small-visible .rule div.content h2
+    .rules
+    {
+        padding-top: 50px;
+    }
+    .rules .divider
+    {
+        display: none;
+    }
+    .rules .rules-list .rule div
+    {
+        display: block;
+        float: none;
+
+        margin: 0 auto;
+    }
+    .rules .rules-list .rule div.content h2
+    {
+        font-size: 32px;
+
+        margin-bottom: 10px;
+    }
+    .rules .rules-list .rule div.content p
     {
         font-size: 20px;
     }
-    .rules .small-visible .rule div.content p
+    .rules .rules-list .rule div:first-child
     {
-        font-size: 16px;
+        width: 80%;
+        padding: 0 0 25px 0;
+
+        text-align: center;
     }
-    .rules .small-visible .rule div:last-child
+    .rules .rules-list .rule div:last-child
     {
-        padding: 0 10px 0 50px;
+        width: 80%;
+        padding: 0;
+
+        text-align: center;
     }
     .contacts .side-contacts .contact-wrapper .contact-content
     {
@@ -352,11 +397,7 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
 {
-    .rules .divider
-    {
-        left: 4%;
-    }
-    .rules .small-visible .rule div:last-child
+    .rules .rules-list .rule div.content
     {
         padding: 0 10px;
     }
@@ -433,6 +474,22 @@
     .calendar .ui-datepicker-month
     {
         font-size: 42px;
+    }
+    .rules .rules-list .rule div.content h2
+    {
+        font-size: 28px;
+    }
+    .rules .rules-list .rule div.content p
+    {
+        font-size: 18px;
+    }
+    .rules .rules-list .rule div:first-child
+    {
+        width: 88%;
+    }
+    .rules .rules-list .rule div:last-child
+    {
+        width: 88%;
     }
 }
 @media only screen and (max-width: 340px)

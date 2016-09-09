@@ -6,6 +6,7 @@
 @sf-medium: "San Francisco Medium", sans-serif;
 @sf-thin: "San Francisco Thin", sans-serif;
 @sf-light: "San Francisco Light", sans-serif;
+@sfui-light: "SFUIDisplay-Light", sans-serif;
 // @sf-bold: "San Francisco Bold", sans-serif;
 
 // colors
@@ -53,7 +54,8 @@ html.js .loader_inner
 
 body
 {
-    font-family: @sf-regular;
+    // font-family: @sf-regular;
+    font-family: @sfui-light;
 }
 
 // body.onload
@@ -167,7 +169,7 @@ ul, ol {
         border-radius: 8px 7px 7px 8px;
         color:#adadad;
         display: block;
-        font-family: @sf-light;
+        font-family: @sfui-light;
         font-size: 25px;
         margin-bottom: 16px;
         padding: 17px;
@@ -178,7 +180,7 @@ ul, ol {
         background-color: @brand-color;
         color: #000;
         border: none;
-        font-family: @sf-light;
+        font-family: @sfui-light;
         font-size: 25px;
         height: 52px;
         width: 100%;
@@ -189,96 +191,6 @@ ul, ol {
     }
 }
 
-/* Page navigation */
-.page-nav {
-    float: right;
-    margin-top: 24px;
-    /* position: fixed;
-    right: 15px;
-    top: 0;
-    z-index: 10; */
-
-    &.sticked {
-        position: fixed;
-        right: 15px;
-        top: 0;
-        z-index: 10;
-    }
-
-    li {
-        display: inline-block;
-        margin-right: 54px;
-
-        a {
-            font-size: 20px;
-            padding-bottom: 1px;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &:hover a {
-            color: @brand-color;
-            border-bottom: 3px solid @brand-color;
-        }
-
-        &.active a {
-            color: @brand-color;
-            border-bottom: 3px solid @brand-color;
-        }
-    }
-}
-
-.nav-toggle::before {
-    color: #10cfbd;
-    content: "≡";
-    font-size: 40px;
-    font-family: san-serif;
-    left: 0;
-    text-align: center;
-    text-indent: 0;
-    text-transform: none;
-    top: 0;
-    height: 55px;
-    position: relative;
-    text-decoration: none;
-    text-indent: -300px;
-    width: 60px;
-}
-.nav-toggle.active::before {
-    content: "x";
-    font-family: @sf-regular;
-}
-
-.side-nav {
-    position: fixed;
-    right: 26px;
-    top: 266px;
-    z-index: 10;
-
-    li {
-        margin-bottom: 10px;
-
-        a {
-            background: @brand-color;
-            border-radius: 100%;
-            display: block;
-            height: 12px;
-            width: 12px;
-        }
-
-        &.active a {
-            background-color: transparent;
-            border: 1px solid @brand-color;
-        }
-
-        &:hover a {
-            background-color: transparent;
-            border: 1px solid @brand-color;
-        }
-    }
-}
 
 /* Calendar */
 .calendar {
@@ -398,9 +310,100 @@ ul, ol {
         color: #000;
     }
 }
-
 .ui-datepicker-other-month .ui-state-default:hover { color: #565656; }
 
+
+/* Page navigation */
+.page-nav {
+    float: right;
+    margin-top: 24px;
+    /* position: fixed;
+    right: 15px;
+    top: 0;
+    z-index: 10; */
+
+    &.sticked {
+        position: fixed;
+        right: 15px;
+        top: 0;
+        z-index: 10;
+    }
+
+    li {
+        display: inline-block;
+        margin-right: 54px;
+
+        a {
+            font-size: 20px;
+            padding-bottom: 1px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover a {
+            color: @brand-color;
+            border-bottom: 3px solid @brand-color;
+        }
+
+        &.active a {
+            color: @brand-color;
+            border-bottom: 3px solid @brand-color;
+        }
+    }
+}
+
+.nav-toggle::before {
+    color: #10cfbd;
+    content: "≡";
+    font-size: 40px;
+    font-family: san-serif;
+    left: 0;
+    text-align: center;
+    text-indent: 0;
+    text-transform: none;
+    top: 0;
+    height: 55px;
+    position: relative;
+    text-decoration: none;
+    text-indent: -300px;
+    width: 60px;
+}
+.nav-toggle.active::before {
+    content: "x";
+    // font-family: @sf-regular;
+    font-family: @sfui-light;
+}
+
+.side-nav {
+    position: fixed;
+    right: 26px;
+    top: 266px;
+    z-index: 10;
+
+    li {
+        margin-bottom: 10px;
+
+        a {
+            background: @brand-color;
+            border-radius: 100%;
+            display: block;
+            height: 12px;
+            width: 12px;
+        }
+
+        &.active a {
+            background-color: transparent;
+            border: 1px solid @brand-color;
+        }
+
+        &:hover a {
+            background-color: transparent;
+            border: 1px solid @brand-color;
+        }
+    }
+}
 
 /* Header */
 header {
@@ -411,6 +414,11 @@ header {
     background-image: -o-linear-gradient(bottom, #f3f3f3, #ebebeb, #f5f5f5);
     background-image: -ms-linear-gradient(bottom, #f3f3f3, #ebebeb, #f5f5f5);
     background-image: linear-gradient(to top, #f3f3f3, #ebebeb, #f5f5f5);
+    background-size: cover;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
     // width: 100%;
     // z-index: 10;
     // &.sticked {
@@ -428,7 +436,8 @@ header {
         }
 
         .banner-content {
-            font-family: @sf-medium;
+            // font-family: @sf-medium;
+            font-family: @sfui-light;
             margin: 116px 0 0 24px;
             h1 {
                 background: @brand-color;
@@ -456,7 +465,7 @@ header {
     .divider {
         position: absolute;
         left: 50%;
-        top: 0;
+        top: 37px;
         transform: translateX(-50%);
     }
 
@@ -472,7 +481,8 @@ header {
             background: @brand-color;
             color: #fff;
             display: inline-block;
-            font-family: @sf-medium;
+            // font-family: @sf-medium;
+            font-family: @sfui-light;
             font-size: 34px;
             line-height: 47px;
             padding: 0 8px;
@@ -480,30 +490,31 @@ header {
         }
         p {
             color: #222;
-            font-family: @sf-medium;
+            // font-family: @sf-medium;
+            font-family: @sfui-light;
             font-size: 25px;
             line-height: 28px;
             margin: 5px 0 48px;
         }
     }
 
-    .small-visible {
-        display: none;
-        margin: -30px 0 0;
+    // .small-visible {
+    .rules-list {
+        // display: none;
+        // margin: -30px 0 0;
         .rule {
             // margin: 0 auto;
             // width: 100%;
             padding-bottom: 64px;
             div {
                 float: left;
-                
 
                 &:first-child  {
                     text-align: right;
                     width: 45%;
                 }
                 &:last-child {
-                    padding: 0 0 0 70px;
+                    padding: 0 0 0 10%;
                     text-align: left;
                     width: 55%;
                 }
@@ -513,17 +524,22 @@ header {
                         background: @brand-color;
                         color: #fff;
                         display: inline-block;
-                        font-family: @sf-medium;
-                        font-size: 30px;
+                        // font-family: @sf-medium;
+                        font-family: @sfui-light;
+                        // font-size: 30px;
+                        font-size: 34px;
                         line-height: 47px;
                         padding: 0 8px;
                         text-transform: uppercase;
                     }
                     p {
                         color: #222;
-                        font-family: @sf-medium;
-                        font-size: 20px;
-                        line-height: 24px;
+                        // font-family: @sf-medium;
+                        font-family: @sfui-light;
+                        // font-size: 20px;
+                        font-size: 25px;
+                        // line-height: 24px;
+                        line-height: 28px;
                         margin: 5px 0 0 0;
                     }
                 }
@@ -541,7 +557,8 @@ header {
 
     .reg-descr {
         color: #fff;
-        font-family: @sf-thin;
+        // font-family: @sf-thin;
+        font-family: @sfui-light;
         h2 {
             font-size: 63px;
             font-weight: 100;
@@ -563,7 +580,7 @@ header {
         background-color: @brand-color;
         color: #222;
         border: none;
-        font-family: @sf-light;
+        font-family: @sfui-light;
         font-size: 28px;
         margin: 60px 0 0;
         height: 68px;
@@ -599,7 +616,7 @@ header {
 
     .contact-content {
         color: #b0b0b0;
-        font-family: @sf-light;
+        font-family: @sfui-light;
         font-size: 25px;
         margin: 24px 0 57px;
 
@@ -639,7 +656,7 @@ header {
             border-radius: 8px 7px 7px 8px;
             color:#adadad;
             display: block;
-            font-family: @sf-light;
+            font-family: @sfui-light;
             font-size: 25px;
             margin-bottom: 16px;
             padding: 17px;
@@ -653,7 +670,7 @@ header {
             border-radius: 7px;
             color:#adadad;
             display: block;
-            font-family: @sf-light;
+            font-family: @sfui-light;
             font-size: 25px;
             margin-bottom: 16px;
             padding: 17px;
@@ -666,7 +683,7 @@ header {
             background-color: @brand-color;
             color: #fff;
             border: none;
-            font-family: @sf-light;
+            font-family: @sfui-light;
             font-size: 25px;
             height: 52px;
             width: 100%;
