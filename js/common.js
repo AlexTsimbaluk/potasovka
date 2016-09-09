@@ -1,5 +1,7 @@
 var dateStart = new Date().getTime();
 
+$.fn.reverse = [].reverse;
+
 $(document).ready(function() {
 
 	var screenWidth = screen.width;
@@ -68,18 +70,17 @@ $(document).ready(function() {
 
 });
 
+
+// menu active item on scroll
 $(window).scroll(function() {
-	/*menu active item on scroll
-	$('.page-nav li').removeClass('active');
-	console.log($('.page-nav li a').reverse());
-	var links = $('.page-nav li a').reverse();
-	console.log(links);*/
-	/*$('.page-nav li a').reverse().each(function() {
-		if ($($(this).attr('href')).offset().top < $(window).scrollTop() + 10) {
+	// console.log('scroll');
+	$('.side-nav li').removeClass('active');
+	$('.side-nav li a').reverse().each(function() {
+		if ($($(this).attr('href')).offset().top < $(window).scrollTop() + 50) {
 			$(this).parent().addClass('active');
 			return false;
 		}
-	});*/
+	});
 }).scroll();
 
 $(window).load(function() {

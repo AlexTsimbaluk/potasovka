@@ -124,6 +124,7 @@
 	.page-nav {
 		float: none;
 	}
+
 	header {
 		padding: 0 0 50px 0;
 		.banner {
@@ -134,24 +135,14 @@
 			.banner-content {
 				margin: 50px 0 0;
 				text-align: center;
-				h1 {
-					font-size: 48px;
-				}
 				p {
-					padding: 0 0 20px;
+					padding: 0 0 20px 60px;
 				}
 			}
 		}
 	}
 
 	.rules {
-		.big-hide {
-			display: none;
-		}
-		.small-visible {
-			display: block;
-		}
-
 		.rules-list {
 			.rule {
 				div {
@@ -323,7 +314,11 @@
 @media only screen and (max-width : 530px)
 {
 	.rules {
-		padding-top: 50px;
+		padding-top: 0;
+
+		.small-visible {
+			display: block;
+		}
 
 		.divider {
 			display: none;
@@ -331,12 +326,13 @@
 		}
 		
 		.rules-list {
-			.rule {
+			display: none;
+
+			/* .rule {
 				div {
 					display: block;
 					float: none;
 					margin: 0 auto;
-					// padding: 0 !important;
 					&.content {
 						h2 {
 							font-size: 32px;
@@ -357,7 +353,7 @@
 						width: 80%;
 					}
 				}
-			}
+			} */
 		}
 	}
 
@@ -407,7 +403,25 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 {
-	.rules {
+	header {
+		.banner {
+			.banner-image {
+				text-align: left;
+			}
+			.banner-content {
+				h1 {
+					font-size: 44px;
+				}
+				p {
+					font-size: 30px;
+					line-height: 48px;
+					padding: 0 0 20px 100px;
+				}
+			}
+		}
+	}
+
+	/* .rules {
 		.rules-list {
 			.rule {
 				div {
@@ -417,7 +431,7 @@
 				}
 			}
 		}
-	}
+	} */
 	.registration {
 		padding: 30px 0 44px;
 		.reg-descr {
@@ -470,7 +484,9 @@
 				a img {
 					margin-bottom: 10px;
 				}
-				
+				p {
+					padding: 0 0 80px 100px;
+				}
 			}
 		}
 	}
@@ -495,7 +511,21 @@
 		}
 	}
 
-	.rules {
+	header {
+		.banner {
+			.banner-content {
+				h1 {
+					font-size: 40px;
+					line-height: 60px;
+				}
+				p {
+					padding: 0 0 80px 80px;
+				}
+			}
+		}
+	}
+
+	/* .rules {
 		.rules-list {
 			.rule {
 				div {
@@ -508,7 +538,7 @@
 				}
 			}
 		}
-	}
+	} */
 }
 
 @media only screen and (max-width : 340px) {

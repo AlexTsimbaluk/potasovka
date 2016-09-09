@@ -134,21 +134,9 @@
 
         text-align: center;
     }
-    header .banner .banner-content h1
-    {
-        font-size: 48px;
-    }
     header .banner .banner-content p
     {
-        padding: 0 0 20px;
-    }
-    .rules .big-hide
-    {
-        display: none;
-    }
-    .rules .small-visible
-    {
-        display: block;
+        padding: 0 0 20px 60px;
     }
     .rules .rules-list .rule div.content h2
     {
@@ -317,42 +305,45 @@
 {
     .rules
     {
-        padding-top: 50px;
+        padding-top: 0;
+    }
+    .rules .small-visible
+    {
+        display: block;
     }
     .rules .divider
     {
         display: none;
     }
-    .rules .rules-list .rule div
+    .rules .rules-list
     {
-        display: block;
-        float: none;
-
-        margin: 0 auto;
-    }
-    .rules .rules-list .rule div.content h2
-    {
-        font-size: 32px;
-
-        margin-bottom: 10px;
-    }
-    .rules .rules-list .rule div.content p
-    {
-        font-size: 20px;
-    }
-    .rules .rules-list .rule div:first-child
-    {
-        width: 80%;
-        padding: 0 0 25px 0;
-
-        text-align: center;
-    }
-    .rules .rules-list .rule div:last-child
-    {
-        width: 80%;
-        padding: 0;
-
-        text-align: center;
+        display: none;
+        /* .rule {
+				div {
+					display: block;
+					float: none;
+					margin: 0 auto;
+					&.content {
+						h2 {
+							font-size: 32px;
+							margin-bottom: 10px;
+						}
+						p {
+							font-size: 20px;
+						}
+					}
+					&:first-child {
+						padding: 0 0 25px 0;
+						text-align: center;
+						width: 80%;
+					}
+					&:last-child {
+						padding: 0;
+						text-align: center;
+						width: 80%;
+					}
+				}
+			} */
     }
     .contacts .side-contacts .contact-wrapper .contact-content
     {
@@ -397,10 +388,32 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
 {
-    .rules .rules-list .rule div.content
+    header .banner .banner-image
     {
-        padding: 0 10px;
+        text-align: left;
     }
+    header .banner .banner-content h1
+    {
+        font-size: 44px;
+    }
+    header .banner .banner-content p
+    {
+        font-size: 30px;
+        line-height: 48px;
+
+        padding: 0 0 20px 100px;
+    }
+    /* .rules {
+		.rules-list {
+			.rule {
+				div {
+					&.content {
+						padding: 0 10px;
+					}
+				}
+			}
+		}
+	} */
     .registration
     {
         padding: 30px 0 44px;
@@ -454,6 +467,10 @@
     {
         margin-bottom: 10px;
     }
+    header .banner .banner-content p
+    {
+        padding: 0 0 80px 100px;
+    }
     .popup-form
     {
         width: 320px;
@@ -475,22 +492,29 @@
     {
         font-size: 42px;
     }
-    .rules .rules-list .rule div.content h2
+    header .banner .banner-content h1
     {
-        font-size: 28px;
+        font-size: 40px;
+        line-height: 60px;
     }
-    .rules .rules-list .rule div.content p
+    header .banner .banner-content p
     {
-        font-size: 18px;
+        padding: 0 0 80px 80px;
     }
-    .rules .rules-list .rule div:first-child
-    {
-        width: 88%;
-    }
-    .rules .rules-list .rule div:last-child
-    {
-        width: 88%;
-    }
+    /* .rules {
+		.rules-list {
+			.rule {
+				div {
+					&.content {
+						h2 {font-size: 28px;}
+						p {font-size: 18px;}
+					}
+					&:first-child {width: 88%;}
+					&:last-child {width: 88%;}
+				}
+			}
+		}
+	} */
 }
 @media only screen and (max-width: 340px)
 {
