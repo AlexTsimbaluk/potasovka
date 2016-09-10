@@ -11,10 +11,12 @@ $(document).ready(function() {
 		// $('.header-main').css({'height' : screen.height});
 	}
 
+	console.log($('.small-visible > div:even'));
+
 	if (screenWidth > 600) {
-		$('.rule-icon, .rule-content', '.rules .left').addClass("wow fadeInLeft").attr("data-wow-offset", "200");
-		$('.rule-icon, .rule-content', '.rules .right').addClass("wow fadeInRight").attr("data-wow-offset", "200");
-		$('.contacts .side-contacts .contact-wrapper').addClass("wow bounceIn").attr("data-wow-offset", "200");
+		$('.rules-list .rule div:first-child, .small-visible > div:odd').addClass("wow fadeInLeft").attr("data-wow-offset", "200");
+		$('.rules-list .rule div:last-child, .small-visible > div:even').addClass("wow fadeInRight").attr("data-wow-offset", "200");
+		$('.contacts .side-contacts .contact-wrapper').addClass("wow bounceIn").attr("data-wow-offset", "50");
 	}
 
 	var nav = responsiveNav(".nav-collapse", {
