@@ -1621,6 +1621,7 @@ html.js .loader_inner
 body
 {
     font-family: 'SFUIDisplay-Light', sans-serif;
+    line-height: 1.4;
 }
 /* выделение текста */
 ::-moz-selection
@@ -1790,12 +1791,16 @@ ol
     background-color: #0dae9f;
 }
 /* Calendar */
+.calendar-wrapper
+{
+    text-align: center;
+}
 .calendar
 {
     /* float: right;
     margin: 262px 0 0; */
     position: absolute;
-    right: 0;
+    right: 20px;
     bottom: -12px;
 
     display: inline-block;
@@ -2040,6 +2045,10 @@ ol
     border: 1px solid #10cfbd;
     background-color: transparent;
 }
+.sm-visible
+{
+    display: none;
+}
 /* Header */
 header
 {
@@ -2071,7 +2080,7 @@ header .banner .banner-content
 header .banner .banner-content h1
 {
     font-size: 63px;
-    line-height: 78px;
+    line-height: 1.4;
 
     display: inline-block;
 
@@ -2085,7 +2094,7 @@ header .banner .banner-content h1
 header .banner .banner-content p
 {
     font-size: 50px;
-    line-height: 58px;
+    line-height: 1.4;
 
     padding: 0 0 60px 105px;
 }
@@ -2123,7 +2132,7 @@ header .banner .banner-content p
 {
     font-family: 'SFUIDisplay-Light', sans-serif;
     font-size: 34px;
-    line-height: 47px;
+    line-height: 1.4;
 
     display: inline-block;
 
@@ -2138,7 +2147,7 @@ header .banner .banner-content p
 {
     font-family: 'SFUIDisplay-Light', sans-serif;
     font-size: 25px;
-    line-height: 28px;
+    line-height: 1.4;
 
     margin: 5px 0 48px;
 
@@ -2164,12 +2173,12 @@ header .banner .banner-content p
 .rules .small-visible .rule div.content h2
 {
     font-family: 'SFUIDisplay-Light', sans-serif;
-    font-size: 32px;
-    line-height: 47px;
+    font-size: 52px;
+    line-height: 1.4;
 
     display: inline-block;
 
-    padding: 0 8px;
+    padding: 0 18px;
 
     text-transform: uppercase;
 
@@ -2179,8 +2188,8 @@ header .banner .banner-content p
 .rules .small-visible .rule div.content p
 {
     font-family: 'SFUIDisplay-Light', sans-serif;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 32px;
+    line-height: 1.4;
 
     margin: 5px 0 10px;
 
@@ -2226,7 +2235,7 @@ header .banner .banner-content p
 {
     font-family: 'SFUIDisplay-Light', sans-serif;
     font-size: 34px;
-    line-height: 47px;
+    line-height: 1.4;
 
     display: inline-block;
 
@@ -2241,7 +2250,7 @@ header .banner .banner-content p
 {
     font-family: 'SFUIDisplay-Light', sans-serif;
     font-size: 25px;
-    line-height: 28px;
+    line-height: 1.4;
 
     margin: 5px 0 0 0;
 
@@ -2267,13 +2276,13 @@ header .banner .banner-content p
 {
     font-size: 63px;
     font-weight: 100;
-    line-height: 74px;
+    line-height: 1.4;
 }
 .registration .reg-descr .address
 {
     font-size: 33px;
     font-weight: 100;
-    line-height: 40px;
+    line-height: 1.4;
 
     margin: 27px 0 90px;
 }

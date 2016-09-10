@@ -46,7 +46,6 @@
 		.form-wrapper {
 			display: block;
 			margin: 0 auto;
-			padding: 240px 0 0;
 
 			.data {
 				width: 40%;
@@ -73,28 +72,78 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 {
+	.page-nav {
+		float: none;
+		li {
+			display: block;
+		}
+	}
+
 	header {
 		.banner {
-			margin-top: 80px;
+			.sm-visible {display: block;}
 			.banner-image {
-				text-align: left;
+				text-align: center;
 			}
 			.banner-content {
 				margin: 66px 0 0 0px;
+				text-align: center;
 				h1 {
-					font-size: 48px;
+					// font-size: 48px;
 				}
 				p {
-					font-size: 42px;
-					padding: 0 0 30px 60px;
+					// font-size: 42px;
+					padding: 20px 0 267px 100px;
+				}
+				a img {
+					margin-bottom: 43px;
 				}
 			}
 		}
 	}
 
+	.rules {
+		padding-top: 0;
+		.small-visible {display: block;}
+		.divider, .rules-list {display: none;}
+	}
+
+	.calendar {position: static;}
+
 	.contacts {
-		.contact-content {
-			font-size: 22px;
+		.side-contacts {
+			display: block;
+			.contact-wrapper {
+				.contact-icon {display: none;}
+				.share-icons {
+					a {
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+		.form-wrapper {
+			padding: 40px 0;
+			text-align: center;
+			width: 90%;
+
+			.data {
+				float: none;
+				margin: 0 auto;
+				// width: 100%;
+				width: 500px;
+				input {
+					font-size: 22px;
+				}
+			}
+			.message {
+				margin: 0;
+				// width: 100%;
+				width: 500px;
+				textarea, .send-message {
+					font-size: 22px;
+				}
+			}
 		}
 	}
 }
@@ -121,10 +170,6 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 {
-	.page-nav {
-		float: none;
-	}
-
 	header {
 		padding: 0 0 50px 0;
 		.banner {
@@ -172,10 +217,15 @@
 		}
 	}
 
-	.contacts {
+	.contacts .contact-content.share-icons {
+		margin: 20px 0 0;
+		padding-bottom: 60px;
+	}
+
+	/* .contacts {
 		.form-wrapper {
 			padding: 40px 0;
-
+	
 			.data {
 				input {
 					font-size: 22px;
@@ -188,7 +238,7 @@
 				}
 			}
 		}
-	}
+	} */
 
     /*Disable Animation on Mobile Devices*/
     .animated
@@ -208,11 +258,11 @@
 }
 
 @media only screen and (max-width : 767px) {
-	.contacts {
+	/* .contacts {
 		.side-contacts {
 			.flex-container;
 			padding: 40px 0 0;
-
+	
 			.contact-wrapper {
 				display: inline-block;
 			}
@@ -223,7 +273,7 @@
 			margin: 0 auto;
 			padding: 40px 0;
 			width: 95%; 
-
+	
 			.data {
 				width: 40%;
 				input {
@@ -237,12 +287,11 @@
 				}
 			}
 		}
-	}
+	} */
 }
 
 @media only screen and (max-width : 670px) {
 	.rules {
-		// .small-visible {
 		.rules-list {
 			.rule {
 				div {
@@ -267,17 +316,13 @@
 }
 
 @media only screen and (max-width : 630px) {
-	.registration {
+	/* .registration {
 		text-align: center;
 		.show-register {
 			display: block;
 			margin: 60px auto 20px;
 		}
-	}
-
-	.calendar {
-		position: static;
-	}
+	} */
 }
 
 @media only screen and (max-width : 600px) {
@@ -303,10 +348,10 @@
 
 @media only screen and (max-width : 580px)
 {
-	.page-nav {
-		float: none;
-		li {
-			margin-right: 28px;
+	.contacts {
+		.form-wrapper {
+			h2 {font-size: 32px;}
+			.data, .message {width: 100%;}
 		}
 	}
 }
@@ -317,7 +362,50 @@
 		padding-top: 0;
 
 		.small-visible {
-			display: block;
+			.rule {
+	            // margin: 0 auto;
+	            // padding-bottom: 30px;
+	            // width: 86%;
+
+	            div {
+	                // display: block;
+	                // float: none;
+	                // text-align: left;
+
+	                &.content {
+	                    h2 {
+	                        // color: #fff;
+	                        // display: inline-block;
+	                        // line-height: 47px;
+	                        font-size: 32px;
+	                        padding: 0 8px;
+	                        // text-transform: uppercase;
+	                    }
+	                    p {
+	                        // line-height: 28px;
+	                        // margin: 5px 0 10px;
+	                        font-size: 20px;
+	                    }
+	                }
+	                &:first-child {
+	                    // padding: 0 0 25px;
+	                    
+	                }
+	                &:last-child {
+	                    // padding: 0;
+	                }
+	            }
+
+	            &:nth-child(2),
+	            &:nth-child(4) {
+	                div {
+	                    &:first-child,
+	                    &:last-child {
+	                        // text-align: right;
+	                    }
+	                }
+	            }
+	        }
 		}
 
 		.divider {
@@ -328,36 +416,11 @@
 		.rules-list {
 			display: none;
 
-			/* .rule {
-				div {
-					display: block;
-					float: none;
-					margin: 0 auto;
-					&.content {
-						h2 {
-							font-size: 32px;
-							margin-bottom: 10px;
-						}
-						p {
-							font-size: 20px;
-						}
-					}
-					&:first-child {
-						padding: 0 0 25px 0;
-						text-align: center;
-						width: 80%;
-					}
-					&:last-child {
-						padding: 0;
-						text-align: center;
-						width: 80%;
-					}
-				}
-			} */
+			
 		}
 	}
 
-	.contacts {
+	/* .contacts {
 		.side-contacts {
 			.contact-wrapper {
 				.contact-content {
@@ -368,11 +431,11 @@
 		.form-wrapper {
 			padding: 20px 0;
 			width: 80%;
-
+	
 			h2 {
 				font-size: 32px;
 			}
-
+	
 			.data {
 				float: none;
 				width: 100%;
@@ -388,7 +451,7 @@
 				}
 			}
 		}
-	}
+	} */
 }
 
 @media only screen and (max-width : 500px)
@@ -421,17 +484,6 @@
 		}
 	}
 
-	/* .rules {
-		.rules-list {
-			.rule {
-				div {
-					&.content {
-						padding: 0 10px;
-					}
-				}
-			}
-		}
-	} */
 	.registration {
 		padding: 30px 0 44px;
 		.reg-descr {
@@ -442,7 +494,9 @@
 		}
 	}
 
-	.contacts {
+	
+
+	/* .contacts {
 		.side-contacts {
 			display: block;
 			.contact-wrapper {
@@ -452,11 +506,11 @@
 		.form-wrapper {
 			padding: 20px 0;
 			width: 80%;
-
+	
 			h2 {
 				font-size: 32px;
 			}
-
+	
 			.data {
 				float: none;
 				width: 100%;
@@ -472,7 +526,7 @@
 				}
 			}
 		}
-	}
+	} */
 }
 
 /* Custom, iPhone Retina */
@@ -494,6 +548,12 @@
 	.popup-form {
 		padding: 20px 10px 30px;
 		width: 320px;
+	}
+
+	.contacts {
+		.form-wrapper {
+			h2 {font-size: 28px;}
+		}
 	}
 }
 
@@ -525,20 +585,19 @@
 		}
 	}
 
-	/* .rules {
-		.rules-list {
+	.rules {
+		.small-visible {
 			.rule {
+				width: 80%;
 				div {
 					&.content {
 						h2 {font-size: 28px;}
 						p {font-size: 18px;}
 					}
-					&:first-child {width: 88%;}
-					&:last-child {width: 88%;}
 				}
 			}
 		}
-	} */
+	}
 }
 
 @media only screen and (max-width : 340px) {

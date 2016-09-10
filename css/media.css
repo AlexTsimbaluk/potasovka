@@ -43,7 +43,6 @@
         display: block;
 
         margin: 0 auto;
-        padding: 240px 0 0;
     }
     .contacts .form-wrapper .data
     {
@@ -64,29 +63,90 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
 {
-    header .banner
+    .page-nav
     {
-        margin-top: 80px;
+        float: none;
+    }
+    .page-nav li
+    {
+        display: block;
+    }
+    header .banner .sm-visible
+    {
+        display: block;
     }
     header .banner .banner-image
     {
-        text-align: left;
+        text-align: center;
     }
     header .banner .banner-content
     {
         margin: 66px 0 0 0;
-    }
-    header .banner .banner-content h1
-    {
-        font-size: 48px;
+
+        text-align: center;
     }
     header .banner .banner-content p
     {
-        font-size: 42px;
-
-        padding: 0 0 30px 60px;
+        padding: 20px 0 267px 100px;
     }
-    .contacts .contact-content
+    header .banner .banner-content a img
+    {
+        margin-bottom: 43px;
+    }
+    .rules
+    {
+        padding-top: 0;
+    }
+    .rules .small-visible
+    {
+        display: block;
+    }
+    .rules .divider,
+    .rules .rules-list
+    {
+        display: none;
+    }
+    .calendar
+    {
+        position: static;
+    }
+    .contacts .side-contacts
+    {
+        display: block;
+    }
+    .contacts .side-contacts .contact-wrapper .contact-icon
+    {
+        display: none;
+    }
+    .contacts .side-contacts .contact-wrapper .share-icons a
+    {
+        margin-right: 10px;
+    }
+    .contacts .form-wrapper
+    {
+        width: 90%;
+        padding: 40px 0;
+
+        text-align: center;
+    }
+    .contacts .form-wrapper .data
+    {
+        float: none;
+
+        width: 500px;
+        margin: 0 auto;
+    }
+    .contacts .form-wrapper .data input
+    {
+        font-size: 22px;
+    }
+    .contacts .form-wrapper .message
+    {
+        width: 500px;
+        margin: 0;
+    }
+    .contacts .form-wrapper .message textarea,
+    .contacts .form-wrapper .message .send-message
     {
         font-size: 22px;
     }
@@ -112,10 +172,6 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px)
 {
-    .page-nav
-    {
-        float: none;
-    }
     header
     {
         padding: 0 0 50px 0;
@@ -154,19 +210,28 @@
     {
         padding: 0 6px;
     }
-    .contacts .form-wrapper
+    .contacts .contact-content.share-icons
     {
-        padding: 40px 0;
+        margin: 20px 0 0;
+        padding-bottom: 60px;
     }
-    .contacts .form-wrapper .data input
-    {
-        font-size: 22px;
-    }
-    .contacts .form-wrapper .message textarea,
-    .contacts .form-wrapper .message .send-message
-    {
-        font-size: 22px;
-    }
+    /* .contacts {
+		.form-wrapper {
+			padding: 40px 0;
+	
+			.data {
+				input {
+					font-size: 22px;
+				}
+			}
+			.message {
+				textarea,
+				.send-message {
+					font-size: 22px;
+				}
+			}
+		}
+	} */
     /*Disable Animation on Mobile Devices*/
     .animated
     {
@@ -185,58 +250,36 @@
 }
 @media only screen and (max-width: 767px)
 {
-    .contacts .side-contacts
-    {
-        /* Направление главной оси flex-контейнера, row по умолчанию, слева направо (в rtl справа налево) */
-        display: -moz-flex;
-        display:  -ms-flex;
-        display:   -o-flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display:      flex;
-            flex-direction: row;
-
-        padding: 40px 0 0;
-
-        -ms-flex-pack: distribute;
-        justify-content: space-around;
-        /* выравнивание по главной оси, блоки равномерно распределены вдоль главной оси */
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        /* выравнивание по поперечной оси, блоки располагаются в центре поперечной оси */
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-    }
-    .contacts .side-contacts .contact-wrapper
-    {
-        display: inline-block;
-    }
-    .contacts .form-wrapper
-    {
-        display: block;
-
-        width: 95%;
-        margin: 0 auto;
-        padding: 40px 0;
-    }
-    .contacts .form-wrapper .data
-    {
-        width: 40%;
-    }
-    .contacts .form-wrapper .data input
-    {
-        font-size: 22px;
-    }
-    .contacts .form-wrapper .message
-    {
-        width: 52%;
-    }
-    .contacts .form-wrapper .message textarea
-    {
-        font-size: 22px;
-    }
+    /* .contacts {
+		.side-contacts {
+			.flex-container;
+			padding: 40px 0 0;
+	
+			.contact-wrapper {
+				display: inline-block;
+			}
+		}
+		
+		.form-wrapper {
+			display: block;
+			margin: 0 auto;
+			padding: 40px 0;
+			width: 95%; 
+	
+			.data {
+				width: 40%;
+				input {
+					font-size: 22px;
+				}
+			}
+			.message {
+				width: 52%;
+				textarea {
+					font-size: 22px;
+				}
+			}
+		}
+	} */
 }
 @media only screen and (max-width: 670px)
 {
@@ -251,20 +294,13 @@
 }
 @media only screen and (max-width: 630px)
 {
-    .registration
-    {
-        text-align: center;
-    }
-    .registration .show-register
-    {
-        display: block;
-
-        margin: 60px auto 20px;
-    }
-    .calendar
-    {
-        position: static;
-    }
+    /* .registration {
+		text-align: center;
+		.show-register {
+			display: block;
+			margin: 60px auto 20px;
+		}
+	} */
 }
 @media only screen and (max-width: 600px)
 {
@@ -292,13 +328,14 @@
 }
 @media only screen and (max-width: 580px)
 {
-    .page-nav
+    .contacts .form-wrapper h2
     {
-        float: none;
+        font-size: 32px;
     }
-    .page-nav li
+    .contacts .form-wrapper .data,
+    .contacts .form-wrapper .message
     {
-        margin-right: 28px;
+        width: 100%;
     }
 }
 @media only screen and (max-width: 530px)
@@ -307,9 +344,15 @@
     {
         padding-top: 0;
     }
-    .rules .small-visible
+    .rules .small-visible .rule div.content h2
     {
-        display: block;
+        font-size: 32px;
+
+        padding: 0 8px;
+    }
+    .rules .small-visible .rule div.content p
+    {
+        font-size: 20px;
     }
     .rules .divider
     {
@@ -318,65 +361,39 @@
     .rules .rules-list
     {
         display: none;
-        /* .rule {
-				div {
-					display: block;
-					float: none;
-					margin: 0 auto;
-					&.content {
-						h2 {
-							font-size: 32px;
-							margin-bottom: 10px;
-						}
-						p {
-							font-size: 20px;
-						}
-					}
-					&:first-child {
-						padding: 0 0 25px 0;
-						text-align: center;
-						width: 80%;
-					}
-					&:last-child {
-						padding: 0;
-						text-align: center;
-						width: 80%;
-					}
+    }
+    /* .contacts {
+		.side-contacts {
+			.contact-wrapper {
+				.contact-content {
+					font-size: 20px;
 				}
-			} */
-    }
-    .contacts .side-contacts .contact-wrapper .contact-content
-    {
-        font-size: 20px;
-    }
-    .contacts .form-wrapper
-    {
-        width: 80%;
-        padding: 20px 0;
-    }
-    .contacts .form-wrapper h2
-    {
-        font-size: 32px;
-    }
-    .contacts .form-wrapper .data
-    {
-        float: none;
-
-        width: 100%;
-    }
-    .contacts .form-wrapper .data input
-    {
-        font-size: 22px;
-    }
-    .contacts .form-wrapper .message
-    {
-        width: 100%;
-        margin: 0;
-    }
-    .contacts .form-wrapper .message textarea
-    {
-        font-size: 22px;
-    }
+			}
+		}
+		.form-wrapper {
+			padding: 20px 0;
+			width: 80%;
+	
+			h2 {
+				font-size: 32px;
+			}
+	
+			.data {
+				float: none;
+				width: 100%;
+				input {
+					font-size: 22px;
+				}
+			}
+			.message {
+				margin: 0;
+				width: 100%;
+				textarea {
+					font-size: 22px;
+				}
+			}
+		}
+	} */
 }
 @media only screen and (max-width: 500px)
 {
@@ -403,17 +420,6 @@
 
         padding: 0 0 20px 100px;
     }
-    /* .rules {
-		.rules-list {
-			.rule {
-				div {
-					&.content {
-						padding: 0 10px;
-					}
-				}
-			}
-		}
-	} */
     .registration
     {
         padding: 30px 0 44px;
@@ -423,42 +429,37 @@
         font-size: 40px;
         line-height: 50px;
     }
-    .contacts .side-contacts
-    {
-        display: block;
-    }
-    .contacts .side-contacts .contact-wrapper
-    {
-        display: block;
-    }
-    .contacts .form-wrapper
-    {
-        width: 80%;
-        padding: 20px 0;
-    }
-    .contacts .form-wrapper h2
-    {
-        font-size: 32px;
-    }
-    .contacts .form-wrapper .data
-    {
-        float: none;
-
-        width: 100%;
-    }
-    .contacts .form-wrapper .data input
-    {
-        font-size: 22px;
-    }
-    .contacts .form-wrapper .message
-    {
-        width: 100%;
-        margin: 0;
-    }
-    .contacts .form-wrapper .message textarea
-    {
-        font-size: 22px;
-    }
+    /* .contacts {
+		.side-contacts {
+			display: block;
+			.contact-wrapper {
+				display: block;
+			}
+		}
+		.form-wrapper {
+			padding: 20px 0;
+			width: 80%;
+	
+			h2 {
+				font-size: 32px;
+			}
+	
+			.data {
+				float: none;
+				width: 100%;
+				input {
+					font-size: 22px;
+				}
+			}
+			.message {
+				margin: 0;
+				width: 100%;
+				textarea {
+					font-size: 22px;
+				}
+			}
+		}
+	} */
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 420px)
@@ -475,6 +476,10 @@
     {
         width: 320px;
         padding: 20px 10px 30px;
+    }
+    .contacts .form-wrapper h2
+    {
+        font-size: 28px;
     }
 }
 @media only screen and (max-width: 380px)
@@ -501,20 +506,18 @@
     {
         padding: 0 0 80px 80px;
     }
-    /* .rules {
-		.rules-list {
-			.rule {
-				div {
-					&.content {
-						h2 {font-size: 28px;}
-						p {font-size: 18px;}
-					}
-					&:first-child {width: 88%;}
-					&:last-child {width: 88%;}
-				}
-			}
-		}
-	} */
+    .rules .small-visible .rule
+    {
+        width: 80%;
+    }
+    .rules .small-visible .rule div.content h2
+    {
+        font-size: 28px;
+    }
+    .rules .small-visible .rule div.content p
+    {
+        font-size: 18px;
+    }
 }
 @media only screen and (max-width: 340px)
 {

@@ -23,7 +23,7 @@
     user-select: none;
 }
 
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 992px) {
     .js .nav-collapse {
         position: relative;
     }
