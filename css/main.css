@@ -2333,6 +2333,7 @@ header .banner .banner-content p
 .contacts
 {
     background: #f5f5f5;
+    /* Safari 3 */
 }
 .contacts .side-contacts
 {
@@ -2374,6 +2375,17 @@ header .banner .banner-content p
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
 }
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+{
+    .contacts .contact-icon
+    {
+        line-height: 102px;
+
+        display: block;
+
+        text-align: center;
+    }
+}
 .contacts .contact-content
 {
     font-family: 'SFUIDisplay-Light', sans-serif;
@@ -2410,6 +2422,17 @@ header .banner .banner-content p
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
+    /* Safari 3 */
+    /* Safari 3 */
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+{
+    .contacts .form-wrapper
+    {
+        display: table;
+
+        margin: 0 auto;
+    }
 }
 .contacts .form-wrapper h2
 {
@@ -2422,6 +2445,16 @@ header .banner .banner-content p
     float: left;
 
     width: 284px;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+{
+    .contacts .form-wrapper .data
+    {
+        display: inline-block;
+        float: none;
+
+        width: 284px ;
+    }
 }
 .contacts .form-wrapper .message
 {

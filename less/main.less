@@ -707,6 +707,15 @@ header {
         width: 102px;
     }
 
+    /* Safari 3 */
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        .contact-icon {
+            display: block;
+            line-height: 102px;
+            text-align: center;
+        }
+    }
+
     .contact-content {
         color: #b0b0b0;
         font-family: @sfui-light;
@@ -722,6 +731,12 @@ header {
         .flex-container;
         padding: 240px 0 0;
 
+        /* Safari 3 */
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            display: table;
+            margin: 0 auto;
+        }
+
         h2 {
             font-size: 42px;
             margin-bottom: 28px;
@@ -731,6 +746,16 @@ header {
             float: left;
             width: 284px;
         }
+
+        /* Safari 3 */
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            .data {
+                display: inline-block;
+                float: none;
+                width: 284px ;
+            }
+        }
+
         .message {
             display: inline-block;
             margin-left: 17px;
