@@ -78,7 +78,25 @@ $(document).ready(function() {
 		firstDay: 1,
 		showOtherMonths: true,
 		monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
-		dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
+		dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+		beforeShowDay: function(date) {
+
+			var m = date.getMonth(), d = date.getDate(), y = date.getFullYear();
+			if (m == 9 && d == 1) {
+				return [true, 'ui-state-highlight', ''];
+			}
+			if (m == 8 && d == 24) {
+				return [true, 'ui-state-highlight', ''];
+			}
+			//for (i = 0; i < disabledDays.length; i++) {
+			//	if($.inArray(y + '-' + (m+1) + '-' + d,disabledDays) != -1) {
+					//return [false];
+					//return [true, 'ui-state-active', ''];
+			//	}
+			//}
+			return [true, ''];
+
+		}
 	});
 
 });
@@ -86,7 +104,6 @@ $(document).ready(function() {
 
 // menu active item on scroll
 $(window).scroll(function() {
-	// console.log('scroll');
 	$('.side-nav li').removeClass('active');
 	$('.side-nav li a').reverse().each(function() {
 		if ($($(this).attr('href')).offset().top < $(window).scrollTop() + 50) {
@@ -114,6 +131,9 @@ $(window).load(function() {
 	// Preloader
 	/*$(".loader_inner").fadeOut();
 	$(".loader").delay(400).fadeOut("slow");*/
+
+	/*$(".small1, .small2, .bigcon").fadeOut();
+    $(".page-preloader").delay(100).fadeOut("slow");*/
 
 });
 
