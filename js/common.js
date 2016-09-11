@@ -11,7 +11,6 @@ $(document).ready(function() {
 		// $('.header-main').css({'height' : screen.height});
 	}
 
-	console.log($('.small-visible > div:even'));
 
 	if (screenWidth > 600) {
 		$('.rules-list .rule div:first-child, .small-visible > div:odd').addClass("wow fadeInLeft").attr("data-wow-offset", "200");
@@ -20,8 +19,20 @@ $(document).ready(function() {
 	}
 
 	var nav = responsiveNav(".nav-collapse", {
+		// customToggle: 'nav-toggle-custom',
 		label: ''
 	});
+
+	var navToggle = $('.nav-toggle');
+	console.log(navToggle);
+
+	navToggle.click(function(e) {
+		var navCollapseLayer = $(this).parents('.nav-collapse-layer');
+		console.log(navCollapseLayer);
+		console.log('navCollapseLayer');
+		console.log(e.target);
+	});
+
 
 	// Header sticky state
 	/*if ($('header').length) {
@@ -78,6 +89,14 @@ $(window).scroll(function() {
 	// console.log('scroll');
 	$('.side-nav li').removeClass('active');
 	$('.side-nav li a').reverse().each(function() {
+		if ($($(this).attr('href')).offset().top < $(window).scrollTop() + 50) {
+			$(this).parent().addClass('active');
+			return false;
+		}
+	});
+
+	$('.page-nav li').removeClass('active');
+	$('.page-nav li a').reverse().each(function() {
 		if ($($(this).attr('href')).offset().top < $(window).scrollTop() + 50) {
 			$(this).parent().addClass('active');
 			return false;

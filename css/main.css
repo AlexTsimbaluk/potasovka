@@ -2011,11 +2011,33 @@ ol
 
     content: 'x';
 }
+/* #nav-toggle-custom::before {
+    color: #10cfbd;
+    content: "≡";
+    cursor: pointer;
+    font-size: 40px;
+    font-family: san-serif;
+    left: 0;
+    text-align: center;
+    text-indent: 0;
+    text-transform: none;
+    top: 0;
+    height: 55px;
+    position: relative;
+    text-decoration: none;
+    text-indent: -300px;
+    width: 60px;
+}
+.nav-toggle-custom.active::before {
+    content: "x";
+    // font-family: @sf-regular;
+    font-family: @sfui-light;
+} */
 .side-nav
 {
     position: fixed;
     z-index: 10;
-    top: 266px;
+    top: 45%;
     right: 26px;
 }
 .side-nav li
